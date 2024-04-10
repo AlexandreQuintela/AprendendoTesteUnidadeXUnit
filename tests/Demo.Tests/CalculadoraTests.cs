@@ -33,6 +33,19 @@ public class CalculadoraTests
         Assert.Equal(total, resultado);
 
     }
+    [Fact]
+    public void Calculadora_Somar_NaoDeveSerIgual()
+    {
+        //Arrange
+        var calculadora = new Calculadora();
+
+        //Act
+        var resultado = calculadora.Somar(1.13123123123, 2.23123123123);
+
+        //Assert
+        Assert.NotEqual(3.3, resultado, 1);
+
+    }
 
     [Fact]
     public void Calculadora_RetornarDivisaoDoisNumeros()
